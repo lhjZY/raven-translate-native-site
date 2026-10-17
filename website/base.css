@@ -1,0 +1,225 @@
+/* 色彩取自 App 图标的象牙底（#FEFDFA）与黑色线稿；成分色对应 ResultView.roleColor。 */
+:root {
+  /* light-dark() 依 color-scheme 取值：默认跟随系统，data-theme 由主题按钮写入并覆盖。 */
+  color-scheme: light dark;
+  --bg: light-dark(#fefdfa, #111110);
+  --bg-soft: light-dark(#f6f4ee, #1a1a18);
+  --ink: light-dark(#141414, #f2f0ea);
+  --ink-soft: light-dark(#55534e, #b3b0a8);
+  --ink-faint: light-dark(#8d8a83, #7d7a73);
+  --line: light-dark(rgba(20, 20, 20, 0.12), rgba(242, 240, 234, 0.12));
+  --key-bg: light-dark(#ffffff, #1f1f1d);
+  --btn-bg: light-dark(#141414, #f2f0ea);
+  --btn-ink: light-dark(#fefdfa, #111110);
+  --ins: light-dark(#1f7a4d, #5cc98f);
+  --del: light-dark(#b4412c, #f0866f);
+  --role-sub: light-dark(#1f6fd1, #6aa8ff);
+  --role-pred: light-dark(#d9730d, #ffa14a);
+  --role-obj: light-dark(#8a4fd6, #b78cff);
+  --role-attr: light-dark(#138a86, #4fcfc9);
+  --font:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
+    "Helvetica Neue", sans-serif;
+  --font-display:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --move: 350ms;
+  /* 单栏阅读宽度（含导航），窄屏两侧各留 24px。 */
+  --page: min(576px, 100% - 48px);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.7 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  padding: 8px 12px;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.skip:focus {
+  top: 12px;
+}
+
+/* ---- 品牌标记：透明线稿作遮罩，随主题取文字色 ---- */
+.mark {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  background: currentColor;
+  mask: url("assets/raven-mark.png") center / contain no-repeat;
+  -webkit-mask: url("assets/raven-mark.png") center / contain no-repeat;
+}
+
+.mark-large {
+  width: 64px;
+  height: 64px;
+}
+
+/* ---- 导航 ---- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: var(--page);
+  margin: 0 auto;
+  padding: 14px 0;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: saturate(1.4) blur(14px);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color 150ms,
+    background-color 150ms;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] {
+  color: var(--ink);
+  background: var(--bg-soft);
+}
+
+.lang,
+.theme {
+  min-width: 44px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink);
+  font: 500 13px var(--font);
+  cursor: pointer;
+  transition: border-color 150ms;
+}
+
+.theme {
+  display: inline-grid;
+  place-items: center;
+  min-width: 32px;
+  padding: 0;
+}
+
+.theme svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* 显示的是点击后将切换到的主题。 */
+:root[data-theme="dark"] .icon-moon,
+:root:not([data-theme="dark"]) .icon-sun {
+  display: none;
+}
+
+.lang:hover,
+.theme:hover {
+  border-color: var(--ink-faint);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-ink);
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  transition:
+    transform 160ms var(--ease),
+    opacity 160ms;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-small {
+  height: 32px;
+  padding: 0 14px;
+  font-size: 13px;
+}

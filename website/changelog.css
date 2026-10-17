@@ -1,0 +1,65 @@
+/* 更新日志页：与首页同一单栏，每个版本一段，版本号与状态在上、条目在下。 */
+.changelog {
+  padding-block: clamp(56px, 10vh, 96px) 80px;
+}
+
+.changelog h1 {
+  font: 650 clamp(36px, 9vw, 48px) / 1.12 var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.changelog .lede {
+  margin-top: 14px;
+}
+
+.releases {
+  margin-top: 48px;
+}
+
+.release {
+  display: grid;
+  gap: 16px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 72px;
+}
+
+.release-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.release-head h2 {
+  font: 600 20px/1.3 var(--font-mono);
+}
+
+.release-date {
+  color: var(--ink-faint);
+  font-size: 13px;
+}
+
+.release ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.release li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+.release li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  width: 7px;
+  height: 2px;
+  background: var(--ink-faint);
+}

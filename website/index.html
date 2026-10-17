@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raven-Translate</title>
+    <meta
+      name="description"
+      content="Raven-Translate：macOS 原生翻译、英文检查与长难句分析工具。"
+      data-i18n-attr="content:meta.description"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <!-- 首帧前应用已保存的主题，避免闪烁；逻辑与 main.js 的 THEME_KEY 保持一致。 -->
+    <script>
+      try {
+        const t = localStorage.getItem("raven-site-theme");
+        if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+      } catch {}
+    </script>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="apple-touch-icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="sections.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main" data-i18n="nav.skip">跳到正文</a>
+
+    <header class="nav">
+      <a class="brand" href="#top" aria-label="Raven-Translate">
+        <span class="mark" aria-hidden="true"></span>
+        <span class="brand-name">Raven-Translate</span>
+      </a>
+      <div class="nav-actions">
+        <a class="nav-link" href="changelog.html" data-i18n="nav.changelog">更新日志</a>
+        <button class="theme" type="button" id="theme-toggle" aria-label="切换到深色主题">
+          <svg
+            class="icon-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20.5 13.2A8.5 8.5 0 1 1 10.8 3.5a6.6 6.6 0 0 0 9.7 9.7z" />
+          </svg>
+          <svg
+            class="icon-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4 6 18M18 6l1.4-1.4"
+            />
+          </svg>
+        </button>
+        <button
+          class="lang"
+          type="button"
+          id="lang-toggle"
+          aria-label="Switch to English"
+          data-i18n-attr="aria-label:lang.switchLabel"
+        >
+          <span data-i18n="lang.switch">EN</span>
+        </button>
+        <a class="btn btn-small" href="#download" data-i18n="cta.download">下载</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <p class="eyebrow" data-i18n="hero.eyebrow">macOS 原生 · 翻译 · 检查 · 分析</p>
+        <h1 class="focus" id="focus-line" data-focus-key="hero.focus">读懂 每一句 英文</h1>
+        <p class="lede" data-i18n="hero.lede">
+          选中文本按下 ⌘1，译文就在原处等你。同一份原文，还能检查语法、拆解长难句。
+        </p>
+        <div class="hero-cta">
+          <a class="btn" href="#download" data-i18n="cta.downloadMac">下载 macOS 版</a>
+          <span class="meta" data-i18n="hero.req">需要 macOS 26 或更高版本</span>
+        </div>
+      </section>
+
+      <section class="modes" id="modes" aria-labelledby="modes-title">
+        <h2 class="section-title" id="modes-title" data-i18n="modes.title">一份原文，三种读法</h2>
+
+        <article class="mode">
+          <header class="mode-head">
+            <span class="mode-index">01</span>
+            <h3 data-i18n="modes.translate.title">翻译</h3>
+            <kbd>⌥1</kbd>
+          </header>
+          <p class="mode-desc" data-i18n="modes.translate.desc">
+            Google、微软翻译免费可用，也可切到 DeepSeek 或自定义
+            AI。自动判断互译方向，切换引擎立即重译。
+          </p>
+          <div class="demo demo-translate" aria-hidden="true">
+            <p class="demo-src">The raven waits where the light ends.</p>
+            <p class="demo-out" data-i18n="modes.translate.out">乌鸦在光线尽头等待。</p>
+          </div>
+        </article>
+
+        <article class="mode">
+          <header class="mode-head">
+            <span class="mode-index">02</span>
+            <h3 data-i18n="modes.check.title">检查</h3>
+            <kbd>⌥2</kbd>
+          </header>
+          <p class="mode-desc" data-i18n="modes.check.desc">
+            逐词聚焦等待结果，修改过的词高亮显示，并附修改说明与中文回译。意思不对就补充原意，AI
+            会据此重新修改；满意后一键写回原文。
+          </p>
+          <div class="demo demo-check" aria-hidden="true">
+            <p>
+              She <del>don't</del> <ins>doesn't</ins> know where the <del>informations</del>
+              <ins>information</ins> came from.
+            </p>
+            <p class="note" data-i18n="modes.check.note">主谓一致 · information 为不可数名词</p>
+          </div>
+        </article>
+
+        <article class="mode">
+          <header class="mode-head">
+            <span class="mode-index">03</span>
+            <h3 data-i18n="modes.analyze.title">分析</h3>
+            <kbd>⌥3</kbd>
+          </header>
+          <p class="mode-desc" data-i18n="modes.analyze.desc">
+            给出译文与句子主干，在原文上高亮各成分，并单独讲解难点。
+          </p>
+          <div class="demo demo-analyze" aria-hidden="true">
+            <p>
+              <span class="r r-sub">The letter</span>
+              <span class="r r-attr">that arrived yesterday</span>
+              <span class="r r-pred">changed</span>
+              <span class="r r-obj">everything</span>.
+            </p>
+            <p class="legend">
+              <span class="r-sub" data-i18n="roles.subject">主语</span>
+              <span class="r-attr" data-i18n="roles.attributive">定语从句</span>
+              <span class="r-pred" data-i18n="roles.predicate">谓语</span>
+              <span class="r-obj" data-i18n="roles.object">宾语</span>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="engines" aria-labelledby="engines-title">
+        <h2 class="section-title" id="engines-title" data-i18n="engines.title">选你信任的引擎</h2>
+        <ul class="engine-list">
+          <li>
+            <strong>Google</strong>
+            <span data-i18n="engines.free">免费翻译</span>
+          </li>
+          <li>
+            <strong data-i18n="engines.microsoft">微软翻译</strong>
+            <span data-i18n="engines.free">免费翻译</span>
+          </li>
+          <li>
+            <strong>DeepSeek</strong>
+            <span data-i18n="engines.ai">AI 翻译 · 检查 · 分析</span>
+          </li>
+          <li>
+            <strong data-i18n="engines.custom">自定义服务</strong>
+            <span data-i18n="engines.customDesc">任意 OpenAI 兼容接口</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shortcuts" id="shortcuts" aria-labelledby="shortcuts-title">
+        <h2 class="section-title" id="shortcuts-title" data-i18n="shortcuts.title">手不离键盘</h2>
+        <dl class="keys">
+          <div>
+            <dt><kbd>⌘1</kbd></dt>
+            <dd data-i18n="shortcuts.selection">翻译选中文本</dd>
+          </div>
+          <div>
+            <dt><kbd>⌘2</kbd></dt>
+            <dd data-i18n="shortcuts.clipboard">翻译剪贴板</dd>
+          </div>
+          <div>
+            <dt><kbd>⌘3</kbd> <kbd>⌘4</kbd></dt>
+            <dd data-i18n="shortcuts.open">打开翻译 / 检查，保留原文</dd>
+          </div>
+          <div>
+            <dt><kbd>⇧⌘G</kbd></dt>
+            <dd data-i18n="shortcuts.check">检查选中文本</dd>
+          </div>
+          <div>
+            <dt><kbd>⇧⌘I</kbd></dt>
+            <dd data-i18n="shortcuts.analyze">分析选中文本</dd>
+          </div>
+          <div>
+            <dt><kbd>⌥1</kbd> <kbd>⌥2</kbd> <kbd>⌥3</kbd></dt>
+            <dd data-i18n="shortcuts.switch">窗口内切换模式</dd>
+          </div>
+        </dl>
+        <p class="meta" data-i18n="shortcuts.note">全局快捷键都可在「设置 → 快捷键」中修改。</p>
+      </section>
+
+      <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+        <h2 class="section-title" id="privacy-title" data-i18n="privacy.title">只在内存里</h2>
+        <ul class="facts">
+          <li data-i18n="privacy.memory">输入与结果只保留在内存，没有历史、账户或云同步。</li>
+          <li data-i18n="privacy.keys">API Key 按服务地址隔离，仅保存在本机，文件权限 0600。</li>
+          <li data-i18n="privacy.send">文本只发送给你当前选择的服务商；朗读使用微软在线语音。</li>
+          <li data-i18n="privacy.selection">
+            不模拟复制，不改写其他应用。未授权辅助功能时仍可翻译剪贴板。
+          </li>
+        </ul>
+      </section>
+
+      <section class="download" id="download" aria-labelledby="download-title">
+        <span class="mark mark-large" aria-hidden="true"></span>
+        <h2 id="download-title" data-i18n="download.title">让乌鸦落在你的菜单栏</h2>
+        <p class="meta" data-i18n="download.req">macOS 26 或更高版本 · 中文 / 英文界面</p>
+        <a class="btn" id="download-link" href="#download" data-i18n="cta.soon">即将发布</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Raven-Translate</span>
+      <span data-i18n="footer.trademark">Google、Microsoft、DeepSeek 为其各自所有者的商标。</span>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
