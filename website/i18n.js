@@ -16,11 +16,10 @@ window.RAVEN_I18N = {
     "lang.switchLabel": "Switch to English",
     "cta.download": "下载",
     "cta.downloadMac": "下载 macOS 版",
-    "cta.soon": "即将发布",
     "hero.eyebrow": "macOS 原生 · 翻译 · 检查 · 分析",
     "hero.focus": ["读懂", "每一句", "英文"],
     "hero.lede": "选中文本按下 ⌘1，译文就在原处等你。同一份原文，还能检查语法、拆解长难句。",
-    "hero.req": "需要 macOS 26 或更高版本",
+    "hero.req": "Apple Silicon · macOS 26 或更高版本",
     "modes.title": "一份原文，三种读法",
     "modes.translate.title": "翻译",
     "modes.translate.desc":
@@ -56,7 +55,9 @@ window.RAVEN_I18N = {
     "privacy.send": "文本只发送给你当前选择的服务商；朗读使用微软在线语音。",
     "privacy.selection": "不模拟复制，不改写其他应用。未授权辅助功能时仍可翻译剪贴板。",
     "download.title": "让乌鸦落在你的菜单栏",
-    "download.req": "macOS 26 或更高版本 · 中文 / 英文界面",
+    "download.req": "0.2.2 预览版 · Apple Silicon · macOS 26+",
+    "download.notice": "此预览版未经过 Apple 公证，macOS 可能阻止首次打开。",
+    "download.details": "版本说明与 SHA-256 校验值",
     "footer.trademark": "Google、Microsoft、DeepSeek 为其各自所有者的商标。",
   },
   en: {
@@ -75,12 +76,11 @@ window.RAVEN_I18N = {
     "lang.switchLabel": "切换到中文",
     "cta.download": "Download",
     "cta.downloadMac": "Download for macOS",
-    "cta.soon": "Coming soon",
     "hero.eyebrow": "Native macOS · Translate · Check · Analyze",
     "hero.focus": ["Read", "every", "sentence"],
     "hero.lede":
       "Select text and press ⌘1 — the translation is waiting right there. Check grammar and untangle long sentences from the same source text.",
-    "hero.req": "Requires macOS 26 or later",
+    "hero.req": "Apple Silicon · macOS 26 or later",
     "modes.title": "One text, three ways to read it",
     "modes.translate.title": "Translate",
     "modes.translate.desc":
@@ -121,7 +121,9 @@ window.RAVEN_I18N = {
     "privacy.selection":
       "No simulated copying, no edits to other apps. Without Accessibility access, clipboard translation still works.",
     "download.title": "Let the raven perch in your menu bar",
-    "download.req": "macOS 26 or later · Chinese and English interface",
+    "download.req": "0.2.2 preview · Apple Silicon · macOS 26+",
+    "download.notice": "This preview is not notarized by Apple. macOS may block the first launch.",
+    "download.details": "Release notes and SHA-256 checksum",
     "footer.trademark":
       "Google, Microsoft, and DeepSeek are trademarks of their respective owners.",
   },

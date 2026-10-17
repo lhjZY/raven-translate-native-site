@@ -27,8 +27,7 @@
 
     <header class="nav">
       <a class="brand" href="#top" aria-label="Raven-Translate">
-        <span class="mark" aria-hidden="true"></span>
-        <span class="brand-name">Raven-Translate</span>
+        <span class="brand-wordmark" aria-hidden="true"></span>
       </a>
       <div class="nav-actions">
         <a class="nav-link" href="changelog.html" data-i18n="nav.changelog">更新日志</a>
@@ -69,7 +68,12 @@
         >
           <span data-i18n="lang.switch">EN</span>
         </button>
-        <a class="btn btn-small" href="#download" data-i18n="cta.download">下载</a>
+        <a
+          class="btn btn-small"
+          href="https://github.com/lhjZY/Raven-t/releases/download/v0.2.2/Raven-Translate-0.2.2-arm64.dmg"
+          data-i18n="cta.download"
+          >下载</a
+        >
       </div>
     </header>
 
@@ -81,8 +85,13 @@
           选中文本按下 ⌘1，译文就在原处等你。同一份原文，还能检查语法、拆解长难句。
         </p>
         <div class="hero-cta">
-          <a class="btn" href="#download" data-i18n="cta.downloadMac">下载 macOS 版</a>
-          <span class="meta" data-i18n="hero.req">需要 macOS 26 或更高版本</span>
+          <a
+            class="btn"
+            href="https://github.com/lhjZY/Raven-t/releases/download/v0.2.2/Raven-Translate-0.2.2-arm64.dmg"
+            data-i18n="cta.downloadMac"
+            >下载 macOS 版</a
+          >
+          <span class="meta" data-i18n="hero.req">Apple Silicon · macOS 26 或更高版本</span>
         </div>
       </section>
 
@@ -218,8 +227,23 @@
       <section class="download" id="download" aria-labelledby="download-title">
         <span class="mark mark-large" aria-hidden="true"></span>
         <h2 id="download-title" data-i18n="download.title">让乌鸦落在你的菜单栏</h2>
-        <p class="meta" data-i18n="download.req">macOS 26 或更高版本 · 中文 / 英文界面</p>
-        <a class="btn" id="download-link" href="#download" data-i18n="cta.soon">即将发布</a>
+        <p class="meta" data-i18n="download.req">0.2.2 预览版 · Apple Silicon · macOS 26+</p>
+        <a
+          class="btn"
+          id="download-link"
+          href="https://github.com/lhjZY/Raven-t/releases/download/v0.2.2/Raven-Translate-0.2.2-arm64.dmg"
+          data-i18n="cta.downloadMac"
+          >下载 macOS 版</a
+        >
+        <p class="meta" data-i18n="download.notice">
+          此预览版未经过 Apple 公证，macOS 可能阻止首次打开。
+        </p>
+        <a
+          class="meta"
+          href="https://github.com/lhjZY/Raven-t/releases/tag/v0.2.2"
+          data-i18n="download.details"
+          >版本说明与 SHA-256 校验值</a
+        >
       </section>
     </main>
 

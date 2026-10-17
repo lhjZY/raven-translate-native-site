@@ -1,17 +1,18 @@
 // 更新日志条目：新版本加在数组最前面。
-// date 为空表示尚未发布，显示状态而非日期；版本号与本仓库
-// script/build_and_run.sh 中 CFBundleShortVersionString 保持一致。
+// date 为空表示尚未发布；版本号与 App 仓库打包脚本的 CFBundleShortVersionString 保持一致。
 const RAVEN_CHANGELOG = [
   {
     version: "0.2.2",
-    date: "",
+    date: "2026-10-17",
     items: {
       zh: [
+        "预览发布：提供 Apple Silicon（arm64）、macOS 26+ 的 DMG；使用临时签名，未做 Apple 公证。",
         "窗口：固定后保持置顶，切换到其他应用或打开设置时不再隐藏；取消固定后恢复失焦隐藏。",
         "外观：弹窗左上角改用 Raven 手写字标、树枝与渡鸦的一体透明 Logo，自动适配浅色和深色主题。",
         "布局：缩小标题栏 Logo，与右侧按钮组垂直居中，并校准左右可见边距。",
       ],
       en: [
+        "Preview release: DMG for Apple Silicon (arm64), macOS 26+, with an ad-hoc signature and no Apple notarization.",
         "Window: pinning keeps the window on top when switching apps or opening settings; unpinning restores hiding on focus loss.",
         "Appearance: a transparent Raven script wordmark with a branch and perched raven replaces the separate header icon and title, adapting to light and dark themes.",
         "Layout: a smaller header logo is vertically centered with the action buttons, with balanced visible margins on both sides.",

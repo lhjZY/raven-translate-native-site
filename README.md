@@ -10,7 +10,7 @@ Raven Translate Native 的独立官方介绍网站。沿用原应用仓库中的
 - `website/index.html`：产品介绍与下载入口。
 - `website/changelog.html`、`website/changelog.js`：更新日志页面与条目。
 - `website/i18n.js`：中英文文案。
-- `website/main.js`：主题、语言、动效与下载配置。
+- `website/main.js`：主题、语言与动效。
 - `website/assets/`：品牌图片。
 - `.github/workflows/pages.yml`：GitHub Pages 自动部署。
 
@@ -32,6 +32,13 @@ python3 -m http.server 8000 --directory website
 
 ## 维护
 
-发布应用新版本时，同步 `website/changelog.js` 与首页版本信息。目前首页下载入口保持原站的“即将发布”状态，未配置安装包地址。提供正式安装包后，更新 `website/index.html` 中 `#download-link` 的地址及对应双语文案。
+当前下载版本为 [0.2.2 预览版](https://github.com/lhjZY/Raven-t/releases/tag/v0.2.2)，安装包由 App 仓库的 Releases 托管，适用于 Apple Silicon（arm64）、macOS 26+。现有包使用临时签名，未做 Apple 公证，网站下载区保留对应说明。
 
-本次从 `Raven-t` 的 `website/` 复制，不迁移应用仓库历史；原目录保留，便于核对与回退。确认新官网上线后，再单独清理旧官网和部署任务。
+官网使用固定版本的附件直链，预览版不依赖 `/releases/latest`。发布新版本时，先上传 DMG 并验证下载，再同步修改：
+
+- `website/index.html` 的导航、首屏和底部下载链接，以及 Release 说明链接。
+- `website/changelog.html` 的导航下载链接。
+- `website/i18n.js` 及首页回退文案中的版本、系统要求和安装说明。
+- `website/changelog.js` 的版本内容与发布日期。
+
+导航字标 `website/assets/raven-wordmark.png` 直接复用 App 的 `RavenWordmark.png`，通过 CSS 遮罩适配明暗主题。

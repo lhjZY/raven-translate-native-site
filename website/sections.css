@@ -338,10 +338,25 @@ kbd {
 @media (max-width: 480px) {
   .nav-actions {
     gap: 6px;
+    white-space: nowrap;
   }
-  /* 只保留乌鸦标记，给更新日志、主题、语言与下载按钮留位。 */
-  .brand-name {
-    display: none;
+  .nav-link {
+    padding-inline: 8px;
+  }
+  .nav .btn-small {
+    padding-inline: 10px;
+  }
+  .nav .lang {
+    padding-inline: 8px;
+  }
+  .nav {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  /* 窄屏仍保留完整字标；按钮放不下时换行，避免挤压品牌图案。 */
+  .brand-wordmark {
+    width: 80px;
+    height: 24px;
   }
   .engine-list {
     grid-template-columns: minmax(0, 1fr);

@@ -122,10 +122,19 @@ p {
 .brand {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 15px;
+  flex-shrink: 0;
   text-decoration: none;
+}
+
+/* 复用 App 的 RavenWordmark.png；按宽度等比缩放，视口仅裁去上下透明留白。
+   使用 alpha 遮罩保留原图形状，并跟随文字色适配明暗主题。 */
+.brand-wordmark {
+  display: block;
+  width: 104px;
+  height: 32px;
+  background: currentColor;
+  mask: url("assets/raven-wordmark.png") center / 100% auto no-repeat;
+  -webkit-mask: url("assets/raven-wordmark.png") center / 100% auto no-repeat;
 }
 
 .nav-actions {
