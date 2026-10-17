@@ -56,7 +56,7 @@ window.RAVEN_I18N = {
     "privacy.selection": "不模拟复制，不改写其他应用。未授权辅助功能时仍可翻译剪贴板。",
     "download.title": "让乌鸦落在你的菜单栏",
     "download.req": "0.2.2 预览版 · Apple Silicon · macOS 26+",
-    "download.notice": "此预览版未经过 Apple 公证，macOS 可能阻止首次打开。",
+    "download.notice": "此安装包未经过 Apple 公证，macOS 可能阻止首次打开。",
     "download.details": "版本说明与 SHA-256 校验值",
     "footer.trademark": "Google、Microsoft、DeepSeek 为其各自所有者的商标。",
   },
@@ -122,7 +122,8 @@ window.RAVEN_I18N = {
       "No simulated copying, no edits to other apps. Without Accessibility access, clipboard translation still works.",
     "download.title": "Let the raven perch in your menu bar",
     "download.req": "0.2.2 preview · Apple Silicon · macOS 26+",
-    "download.notice": "This preview is not notarized by Apple. macOS may block the first launch.",
+    "download.notice":
+      "This installer is not notarized by Apple. macOS may block the first launch.",
     "download.details": "Release notes and SHA-256 checksum",
     "footer.trademark":
       "Google, Microsoft, and DeepSeek are trademarks of their respective owners.",

@@ -32,13 +32,19 @@ python3 -m http.server 8000 --directory website
 
 ## 维护
 
-当前下载版本为 [0.2.2 预览版](https://github.com/lhjZY/raven-translate-native-site/releases/tag/v0.2.2)，安装包由本仓库的公开 Releases 托管，适用于 Apple Silicon（arm64）、macOS 26+。现有包使用临时签名，未做 Apple 公证，网站下载区保留对应说明。
+当前下载版本记录在 `website/release.json`，安装包由本仓库的[公开 Releases](https://github.com/lhjZY/raven-translate-native-site/releases) 托管，适用于 Apple Silicon（arm64）、macOS 26+。现有包使用临时签名，未做 Apple 公证，网站下载区保留对应说明。
 
-官网使用固定版本的附件直链，预览版不依赖 `/releases/latest`。发布新版本时，先将 DMG 同步到本仓库 Releases，验证未登录状态下可下载且 SHA-256 与原文件一致，再同步修改：
+App 仓库的 **Sync website release** 工作流负责同步 DMG、验证公开下载并提交官网版本更新。首次使用需添加 `WEBSITE_RELEASE_TOKEN`，完整步骤见[发布自动化](docs/release-automation.md)。以后先上传 DMG 到 App Release 草稿，再发布即可。
+
+官网使用固定版本的附件直链，预览版不依赖 `/releases/latest`。自动维护：
 
 - `website/index.html` 的导航、首屏和底部下载链接，以及 Release 说明链接。
 - `website/changelog.html` 的导航下载链接。
-- `website/i18n.js` 及首页回退文案中的版本、系统要求和安装说明。
-- `website/changelog.js` 的版本内容与发布日期。
+- `website/i18n.js` 及首页回退文案中的版本标识。
+- `website/release.json` 的版本、预览标记、附件名和 SHA-256。
+
+系统要求、签名说明和 `website/changelog.js` 的产品更新内容仍需按实际发布情况维护。自动化不会推断安装包已完成 Apple 公证。
+
+验证自动化：`python3 -m unittest discover -s tests -v`。部署前仍需在 GitHub 上配置 Secret 并执行一次手动验证。
 
 导航字标 `website/assets/raven-wordmark.png` 直接复用 App 的 `RavenWordmark.png`，通过 CSS 遮罩适配明暗主题。

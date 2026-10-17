@@ -1,0 +1,28 @@
+name: Check release automation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "website/**"
+      - ".github/workflows/check-release-automation.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "website/**"
+      - ".github/workflows/check-release-automation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - run: python3 -m unittest discover -s tests -v
