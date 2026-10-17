@@ -2,8 +2,8 @@
 
 Raven Translate Native 的独立官方介绍网站。沿用原应用仓库中的静态官网，包含产品首页、更新日志、中英文切换及明暗主题。
 
-- 应用源码与发行版本：https://github.com/lhjZY/Raven-t
-- 本仓库只维护官网，应用源码与安装包仍由应用仓库维护。
+- 本仓库维护官网，并通过公开 Releases 分发安装包。
+- App 源码继续保留在私有应用仓库；安装包同步到本仓库，供官网访客直接下载。
 
 ## 目录
 
@@ -32,9 +32,9 @@ python3 -m http.server 8000 --directory website
 
 ## 维护
 
-当前下载版本为 [0.2.2 预览版](https://github.com/lhjZY/Raven-t/releases/tag/v0.2.2)，安装包由 App 仓库的 Releases 托管，适用于 Apple Silicon（arm64）、macOS 26+。现有包使用临时签名，未做 Apple 公证，网站下载区保留对应说明。
+当前下载版本为 [0.2.2 预览版](https://github.com/lhjZY/raven-translate-native-site/releases/tag/v0.2.2)，安装包由本仓库的公开 Releases 托管，适用于 Apple Silicon（arm64）、macOS 26+。现有包使用临时签名，未做 Apple 公证，网站下载区保留对应说明。
 
-官网使用固定版本的附件直链，预览版不依赖 `/releases/latest`。发布新版本时，先上传 DMG 并验证下载，再同步修改：
+官网使用固定版本的附件直链，预览版不依赖 `/releases/latest`。发布新版本时，先将 DMG 同步到本仓库 Releases，验证未登录状态下可下载且 SHA-256 与原文件一致，再同步修改：
 
 - `website/index.html` 的导航、首屏和底部下载链接，以及 Release 说明链接。
 - `website/changelog.html` 的导航下载链接。
