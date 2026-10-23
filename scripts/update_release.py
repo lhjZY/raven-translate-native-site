@@ -47,8 +47,8 @@ def update_website(root, release):
     new_download = f"{RELEASES}/download/{release['tag']}/{release['asset']}"
     version = release["tag"][1:]
     labels = [
-        f"{version}{' 预览版' if release['prerelease'] else ''} · Apple Silicon · macOS 26+",
-        f"{version}{' preview' if release['prerelease'] else ''} · Apple Silicon · macOS 26+",
+        f"{version}{' 预览版' if release['prerelease'] else ''}，适用于 Apple Silicon 和 macOS 26+",
+        f"{version}{' preview' if release['prerelease'] else ''} for Apple Silicon and macOS 26+",
     ]
     updates = {}
     for name, count in (("index.html", 3), ("changelog.html", 1)):

@@ -6,7 +6,7 @@
     <title>Raven-Translate</title>
     <meta
       name="description"
-      content="Raven-Translate：macOS 原生翻译、英文检查与长难句分析工具。"
+      content="Raven-Translate：macOS 原生翻译与英文检查工具。"
       data-i18n-attr="content:meta.description"
     />
     <meta name="color-scheme" content="light dark" />
@@ -79,10 +79,10 @@
 
     <main id="main">
       <section class="hero" id="top">
-        <p class="eyebrow" data-i18n="hero.eyebrow">macOS 原生 · 翻译 · 检查 · 分析</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">macOS 原生翻译与英文检查</p>
         <h1 class="focus" id="focus-line" data-focus-key="hero.focus">读懂 每一句 英文</h1>
         <p class="lede" data-i18n="hero.lede">
-          选中文本按下 ⌘1，译文就在原处等你。同一份原文，还能检查语法、拆解长难句。
+          选中文本按下 ⌘1，译文就在原处等你。同一份原文还能检查英文，改好后直接写回。
         </p>
         <div class="hero-cta">
           <a
@@ -91,12 +91,12 @@
             data-i18n="cta.downloadMac"
             >下载 macOS 版</a
           >
-          <span class="meta" data-i18n="hero.req">Apple Silicon · macOS 26 或更高版本</span>
+          <span class="meta" data-i18n="hero.req">需要 Apple Silicon 和 macOS 26 或更高版本</span>
         </div>
       </section>
 
       <section class="modes" id="modes" aria-labelledby="modes-title">
-        <h2 class="section-title" id="modes-title" data-i18n="modes.title">一份原文，三种读法</h2>
+        <h2 class="section-title" id="modes-title" data-i18n="modes.title">读懂，也写对</h2>
 
         <article class="mode">
           <header class="mode-head">
@@ -106,7 +106,7 @@
           </header>
           <p class="mode-desc" data-i18n="modes.translate.desc">
             Google、微软翻译免费可用，也可切到 DeepSeek 或自定义
-            AI。自动判断互译方向，切换引擎立即重译。
+            AI。中英互译自动判断方向；开启拆句后逐句对照原文与译文，每句可单独朗读。
           </p>
           <div class="demo demo-translate" aria-hidden="true">
             <p class="demo-src">The raven waits where the light ends.</p>
@@ -121,7 +121,7 @@
             <kbd>⌥2</kbd>
           </header>
           <p class="mode-desc" data-i18n="modes.check.desc">
-            逐词聚焦等待结果，修改过的词高亮显示，并附修改说明与中文回译。意思不对就补充原意，AI
+            修改过的词高亮显示，并附修改说明与中文回译。意思不对就补充原意，AI
             会据此重新修改；满意后一键写回原文。
           </p>
           <div class="demo demo-check" aria-hidden="true">
@@ -129,32 +129,7 @@
               She <del>don't</del> <ins>doesn't</ins> know where the <del>informations</del>
               <ins>information</ins> came from.
             </p>
-            <p class="note" data-i18n="modes.check.note">主谓一致 · information 为不可数名词</p>
-          </div>
-        </article>
-
-        <article class="mode">
-          <header class="mode-head">
-            <span class="mode-index">03</span>
-            <h3 data-i18n="modes.analyze.title">分析</h3>
-            <kbd>⌥3</kbd>
-          </header>
-          <p class="mode-desc" data-i18n="modes.analyze.desc">
-            给出译文与句子主干，在原文上高亮各成分，并单独讲解难点。
-          </p>
-          <div class="demo demo-analyze" aria-hidden="true">
-            <p>
-              <span class="r r-sub">The letter</span>
-              <span class="r r-attr">that arrived yesterday</span>
-              <span class="r r-pred">changed</span>
-              <span class="r r-obj">everything</span>.
-            </p>
-            <p class="legend">
-              <span class="r-sub" data-i18n="roles.subject">主语</span>
-              <span class="r-attr" data-i18n="roles.attributive">定语从句</span>
-              <span class="r-pred" data-i18n="roles.predicate">谓语</span>
-              <span class="r-obj" data-i18n="roles.object">宾语</span>
-            </p>
+            <p class="note" data-i18n="modes.check.note">主谓一致；information 为不可数名词</p>
           </div>
         </article>
       </section>
@@ -172,7 +147,7 @@
           </li>
           <li>
             <strong>DeepSeek</strong>
-            <span data-i18n="engines.ai">AI 翻译 · 检查 · 分析</span>
+            <span data-i18n="engines.ai">AI 翻译与检查</span>
           </li>
           <li>
             <strong data-i18n="engines.custom">自定义服务</strong>
@@ -201,12 +176,8 @@
             <dd data-i18n="shortcuts.check">检查选中文本</dd>
           </div>
           <div>
-            <dt><kbd>⇧⌘I</kbd></dt>
-            <dd data-i18n="shortcuts.analyze">分析选中文本</dd>
-          </div>
-          <div>
-            <dt><kbd>⌥1</kbd> <kbd>⌥2</kbd> <kbd>⌥3</kbd></dt>
-            <dd data-i18n="shortcuts.switch">窗口内切换模式</dd>
+            <dt><kbd>⌥1</kbd> <kbd>⌥2</kbd></dt>
+            <dd data-i18n="shortcuts.switch">窗口内切换翻译 / 检查</dd>
           </div>
         </dl>
         <p class="meta" data-i18n="shortcuts.note">全局快捷键都可在「设置 → 快捷键」中修改。</p>
@@ -219,7 +190,7 @@
           <li data-i18n="privacy.keys">API Key 按服务地址隔离，仅保存在本机，文件权限 0600。</li>
           <li data-i18n="privacy.send">文本只发送给你当前选择的服务商；朗读使用微软在线语音。</li>
           <li data-i18n="privacy.selection">
-            不模拟复制，不改写其他应用。未授权辅助功能时仍可翻译剪贴板。
+            优先通过辅助功能读取选区；不提供选区的应用会临时复制一次，随后恢复剪贴板。
           </li>
         </ul>
       </section>
@@ -227,7 +198,7 @@
       <section class="download" id="download" aria-labelledby="download-title">
         <span class="mark mark-large" aria-hidden="true"></span>
         <h2 id="download-title" data-i18n="download.title">让乌鸦落在你的菜单栏</h2>
-        <p class="meta" data-i18n="download.req">0.2.2 预览版 · Apple Silicon · macOS 26+</p>
+        <p class="meta" data-i18n="download.req">0.2.2 预览版，适用于 Apple Silicon 和 macOS 26+</p>
         <a
           class="btn"
           id="download-link"

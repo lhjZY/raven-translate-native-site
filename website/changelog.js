@@ -2,6 +2,30 @@
 // date 为空表示尚未发布；版本号与 App 仓库打包脚本的 CFBundleShortVersionString 保持一致。
 const RAVEN_CHANGELOG = [
   {
+    version: "0.2.3",
+    date: "",
+    items: {
+      zh: [
+        "翻译：新增拆句，逐句对照原文与译文，每句可单独朗读。",
+        "翻译：语言固定为中英互译，自动判断方向。",
+        "朗读：可选英式或美式英语音色；OK、API 429 这类短文本也使用所选音色。",
+        "学习：在翻译或检查结果上点 ♡ 把句子加入词汇本，并在学习窗口中复习。",
+        "移除长难句分析，句子结构改为在词汇本详情中生成。",
+        "设置：移除“登录时启动”，不再管理系统登录项。",
+        "外观：新的 App 图标与菜单栏标记，取自字标中停在树枝上的渡鸦。",
+      ],
+      en: [
+        "Translate: new sentence split shows each source sentence beside its translation, and each can be read aloud.",
+        "Translate: the language pair is now fixed to Chinese and English, with automatic direction detection.",
+        "Read aloud: choose a British or American English voice; short text such as OK or API 429 uses it too.",
+        "Learn: tap ♡ on a translation or check result to save the sentence to your notebook, then review it in the Learn window.",
+        "Sentence analysis is removed; sentence structure is now generated from notebook details.",
+        "Settings: Launch at Login is removed, and the app no longer manages login items.",
+        "Appearance: a new app icon and menu bar mark, drawn from the raven perched on the wordmark's branch.",
+      ],
+    },
+  },
+  {
     version: "0.2.2",
     date: "2026-10-17",
     items: {

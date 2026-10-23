@@ -1,4 +1,4 @@
-/* 色彩取自 App 图标的象牙底（#FEFDFA）与黑色线稿；成分色对应 ResultView.roleColor。 */
+/* 页面色彩：象牙底（#FEFDFA）与黑色文字。 */
 :root {
   /* light-dark() 依 color-scheme 取值：默认跟随系统，data-theme 由主题按钮写入并覆盖。 */
   color-scheme: light dark;
@@ -13,10 +13,6 @@
   --btn-ink: light-dark(#fefdfa, #111110);
   --ins: light-dark(#1f7a4d, #5cc98f);
   --del: light-dark(#b4412c, #f0866f);
-  --role-sub: light-dark(#1f6fd1, #6aa8ff);
-  --role-pred: light-dark(#d9730d, #ffa14a);
-  --role-obj: light-dark(#8a4fd6, #b78cff);
-  --role-attr: light-dark(#138a86, #4fcfc9);
   --font:
     -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB",
     "Helvetica Neue", sans-serif;

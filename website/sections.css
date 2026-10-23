@@ -178,46 +178,10 @@ main > section,
   font-weight: 600;
 }
 
-.note,
-.legend {
+.note {
   margin-top: 12px;
   color: var(--ink-faint);
   font-size: 13px;
-}
-
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 14px;
-}
-
-.legend span::before {
-  content: "";
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  margin-right: 6px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
-.r {
-  text-decoration: underline;
-  text-decoration-thickness: 2.5px;
-  text-underline-offset: 5px;
-}
-
-.r-sub {
-  color: var(--role-sub);
-}
-.r-pred {
-  color: var(--role-pred);
-}
-.r-obj {
-  color: var(--role-obj);
-}
-.r-attr {
-  color: var(--role-attr);
 }
 
 /* ---- 引擎 ---- */
