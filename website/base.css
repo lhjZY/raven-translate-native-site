@@ -84,17 +84,9 @@ p {
   top: 12px;
 }
 
-/* ---- 品牌标记：透明线稿作遮罩，随主题取文字色 ---- */
-.mark {
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  background: currentColor;
-  mask: url("assets/raven-mark.png") center / contain no-repeat;
-  -webkit-mask: url("assets/raven-mark.png") center / contain no-repeat;
-}
-
-.mark-large {
+/* ---- App 图标：自带圆角方形，不再叠加圆角或阴影 ---- */
+.app-icon {
+  display: block;
   width: 64px;
   height: 64px;
 }

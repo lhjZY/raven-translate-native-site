@@ -2,7 +2,7 @@
 // 焦点句（*.focus）用数组表达分词，供真聚焦动效逐词移动。
 window.RAVEN_I18N = {
   zh: {
-    "meta.description": "Raven-Translate：macOS 原生翻译与英文检查工具。",
+    "meta.description": "Raven-Translate：macOS 原生翻译、英文检查与英语学习工具。",
     "nav.skip": "跳到正文",
     "nav.changelog": "更新日志",
     "changelog.docTitle": "Raven-Translate 更新日志",
@@ -16,11 +16,11 @@ window.RAVEN_I18N = {
     "lang.switchLabel": "Switch to English",
     "cta.download": "下载",
     "cta.downloadMac": "下载 macOS 版",
-    "hero.eyebrow": "macOS 原生翻译与英文检查",
+    "hero.eyebrow": "macOS 原生翻译、检查与学习",
     "hero.focus": ["读懂", "每一句", "英文"],
-    "hero.lede": "选中文本按下 ⌘1，译文就在原处等你。同一份原文还能检查英文，改好后直接写回。",
+    "hero.lede": "选中文本按下 ⌘1，译文就在原处等你。检查英文后直接写回，值得记住的句子收进词汇本，按时复习。",
     "hero.req": "需要 Apple Silicon 和 macOS 26 或更高版本",
-    "modes.title": "读懂，也写对",
+    "modes.title": "读懂，写对，记住",
     "modes.translate.title": "翻译",
     "modes.translate.desc":
       "Google、微软翻译免费可用，也可切到 DeepSeek 或自定义 AI。中英互译自动判断方向；开启拆句后逐句对照原文与译文，每句可单独朗读。",
@@ -29,10 +29,14 @@ window.RAVEN_I18N = {
     "modes.check.desc":
       "修改过的词高亮显示，并附修改说明与中文回译。意思不对就补充原意，AI 会据此重新修改；满意后一键写回原文。",
     "modes.check.note": "主谓一致；information 为不可数名词",
+    "modes.learn.title": "学习",
+    "modes.learn.desc":
+      "在翻译或检查结果上点 ♡，把句子加入词汇本。复习有中译英、听写、改错和连词成句，逐词输入、自动评分，并按间隔重复安排下一次。",
+    "modes.learn.note": "中译英；答对后 3 天再复习",
     "engines.title": "选你信任的引擎",
     "engines.free": "免费翻译",
     "engines.microsoft": "微软翻译",
-    "engines.ai": "AI 翻译与检查",
+    "engines.ai": "AI 翻译、检查与句子结构",
     "engines.custom": "自定义服务",
     "engines.customDesc": "任意 OpenAI 兼容接口",
     "shortcuts.title": "手不离键盘",
@@ -40,10 +44,12 @@ window.RAVEN_I18N = {
     "shortcuts.clipboard": "翻译剪贴板",
     "shortcuts.open": "打开翻译 / 检查，保留原文",
     "shortcuts.check": "检查选中文本",
+    "shortcuts.learn": "打开学习窗口",
+    "shortcuts.save": "把当前结果加入词汇本",
     "shortcuts.switch": "窗口内切换翻译 / 检查",
-    "shortcuts.note": "全局快捷键都可在「设置 → 快捷键」中修改。",
-    "privacy.title": "只在内存里",
-    "privacy.memory": "输入与结果只保留在内存，没有历史、账户或云同步。",
+    "shortcuts.note": "除 ⌘D 外，全局快捷键都可在「设置 → 快捷键」中修改。",
+    "privacy.title": "数据留在本机",
+    "privacy.memory": "翻译与检查只保留在内存；只有你加入词汇本的句子会保存在本机。没有账户或云同步。",
     "privacy.keys": "API Key 按服务地址隔离，仅保存在本机，文件权限 0600。",
     "privacy.send": "文本只发送给你当前选择的服务商；朗读使用微软在线语音。",
     "privacy.selection": "优先通过辅助功能读取选区；不提供选区的应用会临时复制一次，随后恢复剪贴板。",
@@ -55,7 +61,7 @@ window.RAVEN_I18N = {
   },
   en: {
     "meta.description":
-      "Raven-Translate: native macOS translation and English checking.",
+      "Raven-Translate: native macOS translation, English checking, and English practice.",
     "nav.skip": "Skip to content",
     "nav.changelog": "Changelog",
     "changelog.docTitle": "Raven-Translate Changelog",
@@ -69,12 +75,12 @@ window.RAVEN_I18N = {
     "lang.switchLabel": "切换到中文",
     "cta.download": "Download",
     "cta.downloadMac": "Download for macOS",
-    "hero.eyebrow": "Native macOS translation and English checking",
+    "hero.eyebrow": "Native macOS translation, checking, and practice",
     "hero.focus": ["Read", "every", "sentence"],
     "hero.lede":
-      "Select text and press ⌘1 — the translation is waiting right there. Check the English in the same text and write the fix straight back.",
+      "Select text and press ⌘1 — the translation is waiting right there. Check your English and write the fix straight back, then save sentences worth keeping and review them on schedule.",
     "hero.req": "Requires Apple Silicon and macOS 26 or later",
-    "modes.title": "Read it right, write it right",
+    "modes.title": "Understand it, fix it, keep it",
     "modes.translate.title": "Translate",
     "modes.translate.desc":
       "Google and Microsoft Translator work for free, or switch to DeepSeek or your own AI. Chinese–English direction is detected automatically; turn on sentence split to compare each sentence with its translation and play it aloud.",
@@ -83,10 +89,14 @@ window.RAVEN_I18N = {
     "modes.check.desc":
       "Changed words are highlighted with explanations and a back-translation. If the meaning is off, say what you meant and the AI revises; accept to write it back to your source.",
     "modes.check.note": "Subject–verb agreement; information is uncountable",
+    "modes.learn.title": "Learn",
+    "modes.learn.desc":
+      "Tap ♡ on a translation or check result to save the sentence to your notebook. Review it with Chinese-to-English, dictation, error correction, and sentence building, typed word by word, graded automatically, and scheduled with spaced repetition.",
+    "modes.learn.note": "Chinese to English; next review in 3 days",
     "engines.title": "Pick the engine you trust",
     "engines.free": "Free translation",
     "engines.microsoft": "Microsoft Translator",
-    "engines.ai": "AI translation and checking",
+    "engines.ai": "AI translation, checking, and sentence structure",
     "engines.custom": "Custom service",
     "engines.customDesc": "Any OpenAI-compatible API",
     "shortcuts.title": "Hands stay on the keyboard",
@@ -94,11 +104,13 @@ window.RAVEN_I18N = {
     "shortcuts.clipboard": "Translate clipboard",
     "shortcuts.open": "Open translate / check, keep text",
     "shortcuts.check": "Check selection",
+    "shortcuts.learn": "Open the Learn window",
+    "shortcuts.save": "Save the current result to the notebook",
     "shortcuts.switch": "Switch between translate and check",
-    "shortcuts.note": "Every global shortcut can be changed in Settings → Shortcuts.",
-    "privacy.title": "Memory only",
+    "shortcuts.note": "Every global shortcut except ⌘D can be changed in Settings → Shortcuts.",
+    "privacy.title": "Your data stays on this Mac",
     "privacy.memory":
-      "Input and results live in memory only — no history, accounts, or cloud sync.",
+      "Translations and checks live in memory only; just the sentences you save to the notebook are stored on this Mac. No accounts or cloud sync.",
     "privacy.keys":
       "API keys are scoped per service address and stored only on this Mac, with 0600 file permissions.",
     "privacy.send":

@@ -116,7 +116,7 @@ main > section,
   border-top: 1px solid var(--line);
 }
 
-/* ---- 三种模式 ---- */
+/* ---- 模式 ---- */
 .mode {
   display: grid;
   gap: 10px;
@@ -176,6 +176,12 @@ main > section,
   color: var(--ins);
   text-decoration: none;
   font-weight: 600;
+}
+
+.demo-learn .gap {
+  display: inline-block;
+  width: 3em;
+  border-bottom: 0.5px solid currentColor;
 }
 
 .note {
