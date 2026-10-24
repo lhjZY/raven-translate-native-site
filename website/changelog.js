@@ -3,7 +3,7 @@
 const RAVEN_CHANGELOG = [
   {
     version: "0.2.3",
-    date: "",
+    date: "2026-10-24",
     items: {
       zh: [
         "翻译：新增拆句，逐句对照原文与译文，每句可单独朗读。",
@@ -12,6 +12,7 @@ const RAVEN_CHANGELOG = [
         "学习：新增学习窗口（⇧⌘L）。在翻译或检查结果上点 ♡ 或按 ⌘D 把句子加入词汇本，可搜索、编辑和导出。",
         "学习：复习支持中译英、听写、改错和连词成句，逐词输入、自动评分，并按间隔重复排期。",
         "学习：词汇本条目可生成句子结构，音标优先取自 CMU 发音词典；统计页显示连续天数、记住率和一年的学习热力图。",
+        "学习：词汇本支持分组，可新建、改名和删除，条目可拖入分组；复习时可只练某个分组。",
         "移除长难句分析，句子结构改为在词汇本详情中生成。",
         "设置：移除“登录时启动”，不再管理系统登录项。",
         "外观：新的 App 图标与菜单栏标记，取自字标中停在树枝上的渡鸦。",
@@ -23,6 +24,7 @@ const RAVEN_CHANGELOG = [
         "Learn: a new Learn window (⇧⌘L). Tap ♡ or press ⌘D on a translation or check result to save the sentence to your notebook, where you can search, edit, and export it.",
         "Learn: review with Chinese-to-English, dictation, error correction, and sentence building, typed word by word, graded automatically, and scheduled with spaced repetition.",
         "Learn: notebook entries can generate a sentence structure, with phonetics from the CMU Pronouncing Dictionary first; Statistics shows your streak, retention, and a year-long activity heatmap.",
+        "Learn: organize the notebook into groups you can create, rename, and delete, drag entries into them, and review a single group.",
         "Sentence analysis is removed; sentence structure is now generated from notebook details.",
         "Settings: Launch at Login is removed, and the app no longer manages login items.",
         "Appearance: a new app icon and menu bar mark, drawn from the raven perched on the wordmark's branch.",
