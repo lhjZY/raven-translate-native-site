@@ -54,7 +54,7 @@ window.RAVEN_I18N = {
     "privacy.send": "文本只发送给你当前选择的服务商；朗读使用微软在线语音。",
     "privacy.selection": "优先通过辅助功能读取选区；不提供选区的应用会临时复制一次，随后恢复剪贴板。",
     "download.title": "让乌鸦落在你的菜单栏",
-    "download.req": "0.2.2 预览版，适用于 Apple Silicon 和 macOS 26+",
+    "download.req": "0.2.3 预览版，适用于 Apple Silicon 和 macOS 26+",
     "download.notice": "此安装包未经过 Apple 公证，macOS 可能阻止首次打开。",
     "download.details": "版本说明与 SHA-256 校验值",
     "footer.trademark": "Google、Microsoft、DeepSeek 为其各自所有者的商标。",
@@ -118,7 +118,7 @@ window.RAVEN_I18N = {
     "privacy.selection":
       "Selections are read through Accessibility first; apps that don’t expose them get one temporary copy, then your clipboard is restored.",
     "download.title": "Let the raven perch in your menu bar",
-    "download.req": "0.2.2 preview for Apple Silicon and macOS 26+",
+    "download.req": "0.2.3 preview for Apple Silicon and macOS 26+",
     "download.notice":
       "This installer is not notarized by Apple. macOS may block the first launch.",
     "download.details": "Release notes and SHA-256 checksum",
